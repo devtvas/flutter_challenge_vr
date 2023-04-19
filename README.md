@@ -3,7 +3,7 @@
 ### Screenshots v1
 
 <img src="assets/images/splash.png" height="500em" /> 
-<img src="assets/images/versao1.png" height="500em" /> 
+
 
 ## Historia do projeto (branchs)
 
@@ -27,6 +27,8 @@
 utilizando qualquer banco de dados em memória
 (Recomendações: SQLite e ObjectBox) com a
 seguinte estrutura.
+
+- <img src="assets\readme_mer.png" height="200em" /> 
 
 
 <h2>Requisitos de ambiente:</h2>
