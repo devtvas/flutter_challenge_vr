@@ -23,7 +23,11 @@
     
 <h2>Detalhe do desafio</h2>
 
-* ...
+* Desenvolver uma Aplicação Flutter
+utilizando qualquer banco de dados em memória
+(Recomendações: SQLite e ObjectBox) com a
+seguinte estrutura.
+
 
 <h2>Requisitos de ambiente:</h2>
 
