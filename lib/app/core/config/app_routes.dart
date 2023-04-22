@@ -6,6 +6,6 @@ class AppRoute {
   static const String homeModule = '/home-module/';
   static const String studentsModule = '/students-module/';
   //pages
-  static const String addStudentsPage = '/add-students/';
+  static const String addStudentsPage = '/addStudentsPage/';
   // static const String loginModule = '/login-module';
 }
