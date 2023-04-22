@@ -14,7 +14,7 @@ class AppWidget extends StatelessWidget {
         title: 'Flutter modular with Mobx',
         theme: ThemeData(
             outlinedButtonTheme: OutlinedButtonThemeData(
-              style: OutlinedButton.styleFrom(primary: Colors.blue),
+              style: OutlinedButton.styleFrom(primary: const Color(0xFFF1A040)),
             ),
             // fontFamily: AppFonts.madeTommy,
             textTheme: const TextTheme(

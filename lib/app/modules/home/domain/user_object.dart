@@ -1,14 +1,14 @@
-class StudentModel {
+class UserObject {
   int id;
   String name;
 
-  StudentModel({
+  UserObject({
     required this.id,
     required this.name,
   });
 
-  factory StudentModel.fromMap(Map<String, dynamic> map) {
-    return StudentModel(
+  factory UserObject.fromMap(Map<String, dynamic> map) {
+    return UserObject(
       id: map['id'],
       name: map['name'],
     );
