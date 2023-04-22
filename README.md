@@ -2,7 +2,9 @@
 
 ### Screenshots v1
 
-<img src="assets/images/splash.png" height="500em" /> 
+<img src="assets\readme_splash.png" height="500em" /> 
+<img src="assets\readme_home.png" height="500em" /> 
+<img src="assets\readme_students.png" height="500em" /> 
 
 
 ## Historia do projeto (branchs)

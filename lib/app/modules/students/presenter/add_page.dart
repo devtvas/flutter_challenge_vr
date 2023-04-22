@@ -30,7 +30,7 @@ class _AddPageState extends State<AddPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Store Content'),
+        title: const Text('Create Student'),
         leading: IconButtonWidget(
             iconData: Icons.arrow_back_sharp,
             onTap: () => Navigator.of(context).pop(insertSuccess)),
