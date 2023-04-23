@@ -5,7 +5,7 @@ import 'package:flutter_modular/flutter_modular.dart';
 
 import '../../../core/config/app_routes.dart';
 import '../../../core/constants/constants.dart';
-import '../../../core/database/database_students.dart';
+import '../../../core/database/students/database_students.dart';
 import '../../../core/widgets/content_item_widget.dart';
 import '../../../core/widgets/dismissible_background_widget.dart';
 import '../../../core/widgets/icon_button_widget.dart';
@@ -242,9 +242,10 @@ class _StudentsPageState extends State<StudentsPage>
                           },
                           key: Key(_aidList[index]['id'].toString()),
                           child: ContentItemWidget(
-                              name: _aidList[index]['name'],
-                              body: _aidList[index]['body'],
-                              photo: _aidList[index]['photo']),
+                            name: _aidList[index]['name'],
+                            body: '',
+                            photo: '',
+                          ),
                         );
                       }),
                 ],

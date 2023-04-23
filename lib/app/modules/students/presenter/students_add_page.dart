@@ -1,9 +1,10 @@
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
-import 'package:vr_soft/app/core/database/database_students.dart';
 
-import '../../../core/utils/validator.dart';
+import '../../../core/constants/constants.dart';
+import '../../../core/database/students/database_students.dart';
+import '../../../core/database/students/database_students_services.dart';
 import '../../../core/widgets/card_widget.dart';
 import '../../../core/widgets/icon_button_widget.dart';
 import '../../../core/widgets/my_box_widget.dart';
@@ -61,6 +62,10 @@ class _StudentsAddPageState extends State<StudentsAddPage> {
                         name: nameController.text,
                       );
                       log('${studentModel.name}');
+                      DatabaseStudentsServices()
+                          .insertItem(studentModel.toMap(), tableStudents)
+                          .then((value) =>
+                              Navigator.of(context).pop(insertSuccess));
                     }
                   }),
             ],
