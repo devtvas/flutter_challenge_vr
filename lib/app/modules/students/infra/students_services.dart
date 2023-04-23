@@ -1,4 +1,4 @@
-import 'database_students.dart';
+import '../../../core/database/students/database_students.dart';
 
 class DatabaseStudentsServices {
   final dbHelper = DatabaseStudents.instance;
