@@ -58,7 +58,6 @@ class _StudentsAddPageState extends State<StudentsAddPage> {
                   onTap: () {
                     if (_formKey.currentState!.validate()) {
                       StudentModel studentModel = StudentModel(
-                        id: 0,
                         name: nameController.text,
                       );
                       log('${studentModel.name}');
