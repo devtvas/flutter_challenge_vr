@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:vr_soft/app/modules/courses/courses_module.dart';
 
+import '../../../core/config/app_routes.dart';
 import '../../../core/style/app_style.dart';
 import '../../students/presenter/students_page.dart';
 
@@ -188,11 +189,11 @@ class _HomePageState extends State<HomePage> {
   onTap(int value) {
     switch (value) {
       case 0:
-        return () => Modular.to.navigate('/students-module');
+        return () => Modular.to.pushNamed('/students');
       case 1:
-        return () => Modular.to.navigate('/students-module');
+        return () => Modular.to.pushNamed('/students');
       default:
-        return () => Modular.to.navigate('/');
+        return () => Modular.to.pushNamed('/');
     }
   }
 }

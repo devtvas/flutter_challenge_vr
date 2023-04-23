@@ -1,11 +1,11 @@
 class AppRoute {
   static const String initialRoute = '/';
   //modules
-  static const String splashModule = '/splash-module/';
-  static const String loginModule = '/login-module/';
-  static const String homeModule = '/home-module/';
-  static const String studentsModule = '/students-module/';
+  static const String splashModule = '/splash/';
+  static const String loginModule = '/login/';
+  static const String homeModule = '/home/';
+  static const String studentsModule = '/students/';
   //pages
-  static const String addStudentsPage = '/addStudentsPage/';
+  static const String studentsAdd = '/students/studentsAdd/';
   // static const String loginModule = '/login-module';
 }

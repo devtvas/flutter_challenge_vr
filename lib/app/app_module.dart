@@ -12,15 +12,9 @@ class AppModule extends Module {
 
   @override
   final List<ModularRoute> routes = [
-    ModuleRoute(Modular.initialRoute,
-        module: SplashModule(), transition: TransitionType.scale),
-    ModuleRoute(AppRoute.splashModule,
-        module: SplashModule(), transition: TransitionType.scale),
-    ModuleRoute(AppRoute.homeModule,
-        module: HomeModule(), transition: TransitionType.scale),
-    ModuleRoute(AppRoute.studentsModule,
-        module: StudentsModule(), transition: TransitionType.scale),
-    // ModuleRoute('/course/', module: CourseModule()),
-    // ModuleRoute('/enroll/', module: EnrollModule()),
+    ModuleRoute(Modular.initialRoute, module: SplashModule()),
+    ModuleRoute('/splash/', module: SplashModule()),
+    ModuleRoute('/home/', module: HomeModule()),
+    ModuleRoute('/students/', module: StudentsModule()),
   ];
 }

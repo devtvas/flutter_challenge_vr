@@ -11,14 +11,14 @@ import '../../../core/widgets/text_button_widget.dart';
 import '../../../core/widgets/text_field_widget.dart';
 import '../domain/student_model.dart';
 
-class AddPage extends StatefulWidget {
-  const AddPage({Key? key}) : super(key: key);
+class StudentsAddPage extends StatefulWidget {
+  const StudentsAddPage({Key? key}) : super(key: key);
 
   @override
-  State<AddPage> createState() => _AddPageState();
+  State<StudentsAddPage> createState() => _StudentsAddPageState();
 }
 
-class _AddPageState extends State<AddPage> {
+class _StudentsAddPageState extends State<StudentsAddPage> {
   TextEditingController nameController = TextEditingController();
   final dbHelper = DatabaseStudents.instance;
 

@@ -60,7 +60,7 @@ class _StudentsPageState extends State<StudentsPage>
         toolbarHeight: 70,
         leading: IconButton(
           icon: const Icon(Icons.chevron_left_rounded),
-          onPressed: () => Modular.to.navigate('/home-module'),
+          onPressed: () => Modular.to.pushNamed('/home'),
         ),
         centerTitle: false,
         title: TextField(
@@ -128,7 +128,7 @@ class _StudentsPageState extends State<StudentsPage>
         actions: [
           IconButtonWidget(
             color: Theme.of(context).primaryColor,
-            onTap: () => Modular.to.navigate(AppRoute.addStudentsPage),
+            onTap: () => Modular.to.pushNamed('/students/studentsAdd'),
             iconData: Icons.add_sharp,
           ),
         ],
