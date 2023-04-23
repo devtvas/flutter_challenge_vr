@@ -58,9 +58,10 @@ class _StudentsPageState extends State<StudentsPage>
       appBar: AppBar(
         backgroundColor: const Color(0xFFF1A040),
         toolbarHeight: 70,
-        leading: IconButton(
-          icon: const Icon(Icons.chevron_left_rounded),
-          onPressed: () => Modular.to.pushNamed('/home'),
+        leading: IconButtonWidget(
+          iconData: Icons.arrow_back_sharp,
+          color: Colors.transparent,
+          onTap: () => Navigator.of(context).pop(),
         ),
         centerTitle: false,
         title: TextField(

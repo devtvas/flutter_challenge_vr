@@ -32,8 +32,10 @@ class _StudentsAddPageState extends State<StudentsAddPage> {
       appBar: AppBar(
         title: const Text('Create Student'),
         leading: IconButtonWidget(
-            iconData: Icons.arrow_back_sharp,
-            onTap: () => Navigator.of(context).pop(insertSuccess)),
+          iconData: Icons.arrow_back_sharp,
+          color: const Color(0xFFF1A040),
+          onTap: () => Navigator.of(context).pop(insertSuccess),
+        ),
       ),
       body: SingleChildScrollView(
         child: CardWidget(
@@ -58,7 +60,7 @@ class _StudentsAddPageState extends State<StudentsAddPage> {
                         id: 0,
                         name: nameController.text,
                       );
-                      log('$studentModel');
+                      log('${studentModel.name}');
                     }
                   }),
             ],
