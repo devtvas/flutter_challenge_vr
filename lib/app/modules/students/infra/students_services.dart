@@ -7,6 +7,10 @@ class DatabaseStudentsServices {
     return await dbHelper.insert(map, tableName);
   }
 
+  Future queryAllRows(String tableName) async {
+    return await dbHelper.queryAllRows(tableName);
+  }
+
   Future updateItem(Map<String, dynamic> map, String tableName) async {
     return await dbHelper.update(map, tableName);
   }

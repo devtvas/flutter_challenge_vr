@@ -55,9 +55,7 @@ class DatabaseStudents {
     String tableName,
   ) async {
     Database db = await instance.database;
-    return await db.query(
-      tableName,
-    );
+    return await db.query(tableName);
   }
 
   // Pass table name and the specific row that you want to update.

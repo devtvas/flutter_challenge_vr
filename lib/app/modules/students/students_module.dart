@@ -8,7 +8,7 @@ import 'presenter/students_page.dart';
 class StudentsModule extends Module {
   @override
   final List<Bind> binds = [
-    Bind.lazySingleton((i) => StudentsController(
+    Bind.singleton((i) => StudentsController(
         databaseStudentsServices: DatabaseStudentsServices()))
   ];
 
