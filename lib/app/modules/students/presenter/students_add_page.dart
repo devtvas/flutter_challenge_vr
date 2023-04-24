@@ -16,7 +16,7 @@ class StudentsAddPage extends StatefulWidget {
 }
 
 class _StudentsAddPageState extends State<StudentsAddPage> {
-  late StudentsController studentsController;
+  StudentsController studentsController = Modular.get<StudentsController>();
 
   TextEditingController nameController = TextEditingController();
 
@@ -26,7 +26,6 @@ class _StudentsAddPageState extends State<StudentsAddPage> {
 
   @override
   void initState() {
-    studentsController = Modular.get<StudentsController>();
     super.initState();
   }
 
@@ -65,11 +64,15 @@ class _StudentsAddPageState extends State<StudentsAddPage> {
                       if (_formKey.currentState!.validate()) {
                         studentsController
                             .insertStudent(
-                              name: nameController.text,
-                            )
+                          name: nameController.text,
+                        )
                             .then(
-                              (value) => Modular.to.pop(),
-                            );
+                          (value) {
+                            studentsController.getData();
+
+                            Modular.to.pop();
+                          },
+                        );
                       }
                     },
                   ),

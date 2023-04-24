@@ -19,16 +19,18 @@ class StudentsPage extends StatefulWidget {
 }
 
 class _StudentsPageState extends State<StudentsPage> {
-  late StudentsController studentsController;
+  StudentsController studentsController = Modular.get<StudentsController>();
+
   TextEditingController searchController = TextEditingController();
+
   bool isSearch = false;
+
   final databaseStudents = DatabaseStudents.instance;
 
   Timer? _debounce;
 
   @override
   void initState() {
-    studentsController = Modular.get<StudentsController>();
     super.initState();
   }
 
