@@ -9,7 +9,7 @@ import '../../../core/widgets/content_item_widget.dart';
 import '../../../core/widgets/dismissible_background_widget.dart';
 import '../../../core/widgets/icon_button_widget.dart';
 import '../../../core/widgets/text_button_widget.dart';
-import 'controller/courses_controller.dart';
+import '../domain/courses_model.dart';
 
 class CoursesPage extends StatefulWidget {
   const CoursesPage({Key? key}) : super(key: key);
@@ -19,14 +19,12 @@ class CoursesPage extends StatefulWidget {
 }
 
 class _CoursesPageState extends State<CoursesPage> {
-  final coursesController = Modular.get<CoursesController>();
-
   TextEditingController searchController = TextEditingController();
 
   bool isSearch = false;
 
   Timer? _debounce;
-
+  List<CoursesModel> coursesModelList = [];
   @override
   void initState() {
     super.initState();
@@ -115,7 +113,7 @@ class _CoursesPageState extends State<CoursesPage> {
         ],
       ),
       body: Observer(builder: (context) {
-        return coursesController.coursesModelList.isEmpty
+        return coursesModelList.isEmpty
             ? Center(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -134,7 +132,7 @@ class _CoursesPageState extends State<CoursesPage> {
                     ListView.builder(
                         physics: const NeverScrollableScrollPhysics(),
                         shrinkWrap: true,
-                        itemCount: coursesController.coursesModelList.length,
+                        itemCount: coursesModelList.length,
                         itemBuilder: (context, index) {
                           return Dismissible(
                             background: DismissibleBackgroundWidget(
@@ -237,8 +235,7 @@ class _CoursesPageState extends State<CoursesPage> {
                             },
                             key: Key(index.toString()),
                             child: ContentItemWidget(
-                              name: coursesController
-                                  .coursesModelList[index].name,
+                              name: coursesModelList[index].name,
                               body: '',
                               photo: '',
                             ),

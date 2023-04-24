@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
-import 'package:flutter_modular/flutter_modular.dart';
 import '../../../core/widgets/card_widget.dart';
 import '../../../core/widgets/icon_button_widget.dart';
 import '../../../core/widgets/my_box_widget.dart';
 import '../../../core/widgets/text_button_widget.dart';
 import '../../../core/widgets/text_field_widget.dart';
-import 'controller/Courses_controller.dart';
 
 class CoursesAddPage extends StatefulWidget {
   const CoursesAddPage({Key? key}) : super(key: key);
@@ -16,8 +14,6 @@ class CoursesAddPage extends StatefulWidget {
 }
 
 class _CoursesAddPageState extends State<CoursesAddPage> {
-  final coursesController = Modular.get<CoursesController>();
-
   TextEditingController nameController = TextEditingController();
 
   final _formKey = GlobalKey<FormState>();
