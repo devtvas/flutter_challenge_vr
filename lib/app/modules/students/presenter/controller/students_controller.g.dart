@@ -33,6 +33,14 @@ mixin _$StudentsController on _StudentsControllerBase, Store {
     });
   }
 
+  late final _$getListAsyncAction =
+      AsyncAction('_StudentsControllerBase.getList', context: context);
+
+  @override
+  Future<dynamic> getList() {
+    return _$getListAsyncAction.run(() => super.getList());
+  }
+
   @override
   String toString() {
     return '''

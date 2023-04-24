@@ -47,18 +47,21 @@ abstract class _StudentsControllerBase with Store {
   //   }
   //   return false;
   // }
-
-  void getList() async {
+  @action
+  Future getList() async {
     _studentModelList.clear();
-    final List<Map<String, dynamic>> maps =
-        await databaseStudentsServices.queryAllRows(tableStudents);
-    List.generate(maps.length, (i) {
-      return _studentModelList.add(StudentModel(
-        id: maps[i]['id'],
-        name: maps[i]['name'],
-      ));
-    });
-    print(studentModelList.first);
+    try {
+      final List<Map<String, dynamic>> maps =
+          await databaseStudentsServices.queryAllRows(tableStudents);
+      _studentModelList = List.generate(maps.length, (i) {
+        return StudentModel(
+          id: maps[i]['id'],
+          name: maps[i]['name'],
+        );
+      });
+    } catch (e) {
+      print(e.toString());
+    }
   }
 
   void getData() async {
