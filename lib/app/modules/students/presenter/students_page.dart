@@ -19,7 +19,7 @@ class StudentsPage extends StatefulWidget {
 }
 
 class _StudentsPageState extends State<StudentsPage> {
-  StudentsController studentsController = Modular.get<StudentsController>();
+  final studentsController = Modular.get<StudentsController>();
 
   TextEditingController searchController = TextEditingController();
 

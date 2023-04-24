@@ -5,6 +5,7 @@ const tableCoursesStudents = 'tbl_courses_students';
 
 //Column name for Courses table
 const coursesId = 'coursesId';
+const coursesName = 'name';
 const coursesDescription = 'description';
 const coursesEmenta = 'ementa';
 

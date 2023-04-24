@@ -6,17 +6,17 @@ import '../../../core/widgets/icon_button_widget.dart';
 import '../../../core/widgets/my_box_widget.dart';
 import '../../../core/widgets/text_button_widget.dart';
 import '../../../core/widgets/text_field_widget.dart';
-import 'controller/students_controller.dart';
+import 'controller/Courses_controller.dart';
 
-class StudentsAddPage extends StatefulWidget {
-  const StudentsAddPage({Key? key}) : super(key: key);
+class CoursesAddPage extends StatefulWidget {
+  const CoursesAddPage({Key? key}) : super(key: key);
 
   @override
-  State<StudentsAddPage> createState() => _StudentsAddPageState();
+  State<CoursesAddPage> createState() => _CoursesAddPageState();
 }
 
-class _StudentsAddPageState extends State<StudentsAddPage> {
-  final studentsController = Modular.get<StudentsController>();
+class _CoursesAddPageState extends State<CoursesAddPage> {
+  final coursesController = Modular.get<CoursesController>();
 
   TextEditingController nameController = TextEditingController();
 
@@ -62,17 +62,12 @@ class _StudentsAddPageState extends State<StudentsAddPage> {
                     name: 'Save',
                     onTap: () {
                       if (_formKey.currentState!.validate()) {
-                        studentsController
-                            .insertStudent(
-                          name: nameController.text,
-                        )
-                            .then(
-                          (value) {
-                            studentsController.getData();
-
-                            Modular.to.pop();
-                          },
-                        );
+                        // coursesController.insertStudent(name: name) .then(
+                        //   (value) {
+                        //     coursesController.getData();
+                        //     Modular.to.pop();
+                        //   },
+                        // );
                       }
                     },
                   ),
